@@ -16,7 +16,7 @@ Copy `.env.example` to `.env` and fill in the values with your Auth0 client sett
 auth0 apps create \
   --name "Spring MVC" \
   --description "Spring Boot Webapp" \
-  --type spa \
+  --type regular \
   --callbacks http://localhost:4040/login/oauth2/code/okta \
   --logout-urls http://localhost:4040 \
   --reveal-secrets
