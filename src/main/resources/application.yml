@@ -7,6 +7,14 @@ okta:
     client-id: ${OKTA_OAUTH2_CLIENT_ID}
     client-secret: ${OKTA_OAUTH2_CLIENT_SECRET}
 
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          #okta:
+            #client-authentication-method: client_secret_post
+
 logging:
   level:
     org.springframework.security: DEBUG
