@@ -52,3 +52,5 @@ OKTA_OAUTH2_CLIENT_SECRET=<client-secret>
 ```shell
 ./gradlew bootRun
 ```
+
+In your browser, open a private window and navigate to [http://localhost:4040](http://localhost:4040). You will be redirected to the Auth0 Universal Login page.
