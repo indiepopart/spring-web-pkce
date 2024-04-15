@@ -34,17 +34,20 @@ auth0 apps create \
   --name "Spring MVC" \
   --description "Spring Boot Webapp" \
   --type regular \
-  --callbacks http://localhost:4040/login/oauth2/code/okta \
-  --logout-urls http://localhost:4040 \
+  --callbacks http://localhost:8080/login/oauth2/code/okta \
+  --logout-urls http://localhost:8080 \
   --reveal-secrets
 ```
 
-Copy `.env.example` to `.env` and fill in the values with your Auth0 client settings.
+Copy `application.yml.example` to `application.yml` and fill in the values with your Auth0 client settings.
 
-```shell
-OKTA_OAUTH2_ISSUER=https://<your-auth0-domain>/
-OKTA_OAUTH2_CLIENT_ID=<client-id>
-OKTA_OAUTH2_CLIENT_SECRET=<client-secret>
+```yml
+okta:
+  oauth2:
+    issuer: https://<your-auth0-domain>/
+    client-id: <client-id>
+    client-secret: <client-secret>
+    post-logout-redirect-uri: http://localhost:8080
 ```
 
 ## Run the application
@@ -53,4 +56,4 @@ OKTA_OAUTH2_CLIENT_SECRET=<client-secret>
 ./gradlew bootRun
 ```
 
-In your browser, open a private window and navigate to [http://localhost:4040](http://localhost:4040). You will be redirected to the Auth0 Universal Login page.
+In your browser, open a private window and navigate to [http://localhost:8080](http://localhost:8080). You will be redirected to the Auth0 Universal Login page.
