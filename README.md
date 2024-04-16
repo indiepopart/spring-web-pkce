@@ -1,10 +1,10 @@
 # Spring Web Application with Authorization Code Flow with PKCE
 
-This is a simple Spring Boot web application with just a secured index page at the `/` location, and a profile page at `/profile`, built with Thymeleaf templates, for the purpose of demonstrating the OpenID Connect Authorization Code Flow with PKCE, using Auth0 as the identity provider.
+This is a simple Spring Boot web application with just a secured home page at the `/` location, built with Thymeleaf templates, for the purpose of demonstrating the OpenID Connect Authorization Code Flow with PKCE in a confidential client, using Auth0 as the identity provider.
 
 ## Prerequisites
 
-- [Java OpenJDK 17](https://jdk.java.net/java-se-ri/17)
+- [Java OpenJDK 21](https://jdk.java.net/java-se-ri/21)
 - [Auth0 account](https://auth0.com/signup)
 - [Auth0 CLI 1.4.0](https://github.com/auth0/auth0-cli#installation)
 
